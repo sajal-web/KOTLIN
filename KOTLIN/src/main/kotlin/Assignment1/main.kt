@@ -22,7 +22,7 @@ fun addProduct() {
     productManager.addProduct(Products(7, "P7", "Shirt", 899.00, 10.00, "2023-07-06"))
     productManager.addProduct(Products(8, "P8", "B7", 399.00, 10.00, "2023-06-12"))
     productManager.addProduct(Products(9, "P9", "B8", 299.00, 10.00, "2023-06-12"))
-    productManager.addProduct(Products(10, "P10", "B9", 99.00, 0.00, "2023-08-05"))
+    productManager.addProduct(Products(10, "P10", "B9", 99.00, 0.00, "2023-07-07"))
 
     // Get the list of products
     val products = productManager.getProducts()
@@ -87,7 +87,7 @@ fun displayMfgDiffFive(products: List<Products>): List<Products> {
     // Optimize code
     //    val cur = LocalDate.now()
 
-    return products.filter { getDaysDiff(it.mfg) in 1..5 }
+    return products.filter { it.mfg.getDaysDiff() in 1..5 }
 
 }
 
